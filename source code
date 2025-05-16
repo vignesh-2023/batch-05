@@ -1,0 +1,31 @@
+# Step 1: Unzip the uploaded file
+import zipfile
+import os
+
+zip_path = '/content/fraudTest.csv (1).zip'
+extract_path = '/content/'
+
+with zipfile.ZipFile(zip_path, 'r') as zip_ref:
+    zip_ref.extractall(extract_path)
+
+# Step 2: Find and load the extracted CSV file
+import pandas as pd
+
+# Automatically find the CSV file in the extracted contents
+for file in os.listdir(extract_path):
+    if file.endswith('.csv'):
+        csv_file_path = os.path.join(extract_path, file)
+        break
+
+# Load the CSV
+df = pd.read_csv(csv_file_path)
+
+# Step 3: Display basic information about the data
+print("First 5 rows:")
+print(df.head())
+
+print("\nDataset Info:")
+print(df.info())
+
+print("\nMissing values:")
+print(df.isnull().sum())
