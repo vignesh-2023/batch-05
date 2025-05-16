@@ -1,0 +1,103 @@
+First 5 rows:
+   Unnamed: 0 trans_date_trans_time            cc_num  \
+0           0   2020-06-21 12:14:25  2291163933867244   
+1           1   2020-06-21 12:14:33  3573030041201292   
+2           2   2020-06-21 12:14:53  3598215285024754   
+3           3   2020-06-21 12:15:15  3591919803438423   
+4           4   2020-06-21 12:15:17  3526826139003047   
+
+                               merchant        category    amt   first  \
+0                 fraud_Kirlin and Sons   personal_care   2.86    Jeff   
+1                  fraud_Sporer-Keebler   personal_care  29.84  Joanne   
+2  fraud_Swaniawski, Nitzsche and Welch  health_fitness  41.28  Ashley   
+3                     fraud_Haley Group        misc_pos  60.05   Brian   
+4                 fraud_Johnston-Casper          travel   3.19  Nathan   
+
+       last gender                       street  ...      lat      long  \
+0   Elliott      M            351 Darlene Green  ...  33.9659  -80.9355   
+1  Williams      F             3638 Marsh Union  ...  40.3207 -110.4360   
+2     Lopez      F         9333 Valentine Point  ...  40.6729  -73.5365   
+3  Williams      M  32941 Krystal Mill Apt. 552  ...  28.5697  -80.8191   
+4    Massey      M     5783 Evan Roads Apt. 465  ...  44.2529  -85.0170   
+
+   city_pop                     job         dob  \
+0    333497     Mechanical engineer  1968-03-19   
+1       302  Sales professional, IT  1990-01-17   
+2     34496       Librarian, public  1970-10-21   
+3     54767            Set designer  1987-07-25   
+4      1126      Furniture designer  1955-07-06   
+
+                          trans_num   unix_time  merch_lat  merch_long  \
+0  2da90c7d74bd46a0caf3777415b3ebd3  1371816865  33.986391  -81.200714   
+1  324cc204407e99f51b0d6ca0055005e7  1371816873  39.450498 -109.960431   
+2  c81755dbbbea9d5c77f094348a7579be  1371816893  40.495810  -74.196111   
+3  2159175b9efe66dc301f149d3d5abf8c  1371816915  28.812398  -80.883061   
+4  57ff021bd3f328f8738bb535c302a31b  1371816917  44.959148  -85.884734   
+
+   is_fraud  
+0         0  
+1         0  
+2         0  
+3         0  
+4         0  
+
+[5 rows x 23 columns]
+
+Dataset Info:
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 555719 entries, 0 to 555718
+Data columns (total 23 columns):
+ #   Column                 Non-Null Count   Dtype  
+---  ------                 --------------   -----  
+ 0   Unnamed: 0             555719 non-null  int64  
+ 1   trans_date_trans_time  555719 non-null  object 
+ 2   cc_num                 555719 non-null  int64  
+ 3   merchant               555719 non-null  object 
+ 4   category               555719 non-null  object 
+ 5   amt                    555719 non-null  float64
+ 6   first                  555719 non-null  object 
+ 7   last                   555719 non-null  object 
+ 8   gender                 555719 non-null  object 
+ 9   street                 555719 non-null  object 
+ 10  city                   555719 non-null  object 
+ 11  state                  555719 non-null  object 
+ 12  zip                    555719 non-null  int64  
+ 13  lat                    555719 non-null  float64
+ 14  long                   555719 non-null  float64
+ 15  city_pop               555719 non-null  int64  
+ 16  job                    555719 non-null  object 
+ 17  dob                    555719 non-null  object 
+ 18  trans_num              555719 non-null  object 
+ 19  unix_time              555719 non-null  int64  
+ 20  merch_lat              555719 non-null  float64
+ 21  merch_long             555719 non-null  float64
+ 22  is_fraud               555719 non-null  int64  
+dtypes: float64(5), int64(6), object(12)
+memory usage: 97.5+ MB
+None
+
+Missing values:
+Unnamed: 0               0
+trans_date_trans_time    0
+cc_num                   0
+merchant                 0
+category                 0
+amt                      0
+first                    0
+last                     0
+gender                   0
+street                   0
+city                     0
+state                    0
+zip                      0
+lat                      0
+long                     0
+city_pop                 0
+job                      0
+dob                      0
+trans_num                0
+unix_time                0
+merch_lat                0
+merch_long               0
+is_fraud                 0
+dtype: int64
